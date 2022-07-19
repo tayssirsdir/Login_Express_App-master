@@ -1,0 +1,191 @@
+
+<%- include('header') -%>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidemenu || Future web</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidemenu" id="sidemenu">
+            <!--<div class="logo"> <i class="fa-brands fa-joomla"></i> </div>-->
+            <!--<div class="menu">
+                <div class="menu_item">
+                    <div class="menu_control">
+                        <div class="menu_show"> <i class="fa-brands fa-dashcube icons"></i>
+                            <p>Dashboard</p>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+            <div class="menu">
+                <div class="menu_item">
+                    <div>
+                        <div class="menu_control">
+                            <div class="menu_show"> <i class="fa-brands fa-discourse icons"></i>
+                                <p>exchange</p>
+                            </div> <i class="fa-solid fa-angle-down" id="openMenu"></i>
+                        </div>
+                    </div>
+                    <ul id="menu_list">
+                        <li>
+                            <form action="/route/login" method="POST">
+                                <button class="btn btn1" type="submit" style="background-color:#151D38" value="suisse">suisse</button>
+                            </form>
+                        </li><br>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="menu_item">
+                    <div>
+                        <div class="menu_control">
+                            <div class="menu_show"> <i class="fa-solid fa-chart-line icons"></i>
+                                <p>Ini files</p>
+                            </div> <i class="fa-solid fa-angle-down" id="openMenu"></i>
+                        </div>
+                    </div>
+                    <ul id="menu_list">
+                        
+                        <li>
+                            <form action="/upload" method="get" >
+                            <button class="btn btn1" type="submit" style="background-color:#151D38" value="upload ">upload </button> </form></li>
+                            <form action="/route/download" method="post">
+                        <li><button class="btn btn1" type="submit" style="background-color:#151D38" value="upload ">INI </button></form></li>
+                        <form action="/route/download" method="post">
+                        <li><button class="btn btn1" type="submit" style="background-color:#151D38" value="upload ">INI </button></form></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="menu_item">
+                    <div>
+                        <div class="menu_control">
+                            <div class="menu_show"> <i class="fa-solid fa-clone icons"></i>
+                                <p>Post</p>
+                            </div> <i class="fa-solid fa-angle-down" id="openMenu"></i>
+                        </div>
+                    </div>
+                    <ul id="menu_list">
+                        <li>Treding Post</li>
+                        <li>Lastest Post</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="menu_item">
+                    <div class="menu_control">
+                        <div class="menu_show"> <i class="fa-solid fa-chart-pie icons"></i>
+                            <p>Analystics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="menu_item">
+                    <div class="menu_control">
+                        <div class="menu_show"> <i class="fa-solid fa-calendar-days icons"></i>
+                            <p>Calendar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="menu_item">
+                    <div>
+                        <div class="menu_control">
+                            <div class="menu_show"> <i class="fa-solid fa-child icons"></i>
+                                <p>About Us</p>
+                            </div> <i class="fa-solid fa-angle-down" id="openMenu"></i>
+                        </div>
+                    </div>
+                    <ul id="menu_list">
+                        <li>Team</li>
+                        <li>Culture</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="menu_item">
+                    <div>
+                        <div class="menu_control">
+                            <div class="menu_show"> <i class="fa-solid fa-gear icons"></i>
+                                <p>Setting</p>
+                            </div> <i class="fa-solid fa-angle-down" id="openMenu"></i>
+                        </div>
+                    </div>
+                    <ul id="menu_list">
+                        <li>Edit Profile</li>
+                        <li>Security</li>
+                    </ul>
+                </div>
+            </div>
+            <!--<div class="profile"> <img src=https://drive.google.com/uc?export=view&id=1lwtKbaAuSR-GzEgQYW0OIU1baKEyvSxa />
+                <div>
+                    <p>John</p>
+                    <p>Developer</p>
+                </div>
+            </div>-->
+        </div>
+       
+        <div> <i class="fa-solid fa-bars" id="toggleIcon"></i> </div>
+
+    </div>
+</body>
+
+</html>
+<script>
+    const toggleIcon = document.getElementById('toggleIcon');
+const sidemenu = document.getElementById('sidemenu');
+const openMenu = document.getElementById('openMenu');
+toggleIcon.addEventListener('click', () => {
+    sidemenu.classList.toggle('collapseMenu');
+    document.querySelectorAll('.toggleMenu').forEach(function(element) {
+        element.classList.remove('toggleMenu');
+    });
+});
+const arrow = document.querySelectorAll('.fa-angle-down');
+for (let i = 0; i < arrow.length; i++) {
+    arrow[i].addEventListener('click', e => {
+        e.target.classList.toggle('changeDirection');
+        let arrowParent = e.target.parentElement.parentElement;
+        arrowParent.classList.toggle('toggleMenu');
+    });
+}
+</script>
+<!--<div class="text-center center-div" id="login">
+    <div class="container w-25 border py-5">
+        <div class="title pb-5">
+            <h2 class="font-weight-bold">Login System</h2>
+            <span>Log in for the existing user</span>
+            <% if(locals.logout){ %>
+                <div class="alter alert-success text-center">
+                    <%= logout %>
+                </div>
+            <% } %>
+        </div>-->
+        <!--<form action="/route/login" method="POST" class="pt-3">
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="email" name="email">
+                <small class="form-text text-muted text-left">Register email address</small>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="password">
+            </div>
+            <button type="submit" class="btn btn-success rounded-pill">Submit</button>
+        </form>
+    </div>
+</div>-->
+
+
+<%- include('footer') -%>
+

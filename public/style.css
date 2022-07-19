@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('/assets/fisglobal.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.center-div{
+    padding-top: 10%;
+}
+
+.btn.btn-success{
+    padding: .4em 2em;
+}
+
+form{
+    padding: 0 3em;
+}
+
+#login .title > span{
+    font-size: .8em;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    float: left;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #cfcfcf;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.sidemenu {
+    position: relative;
+    width: 250px;
+    background-color: #151D38;
+    color: #ffffff;
+    transition: all 0.4s ease-in-out;
+    padding-bottom: 80px;
+    overflow: auto;
+    float: left;
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 40px;
+    color: #157885;
+}
+
+.menu {
+    position: relative;
+    width: 100%;
+    font-weight: 800;
+    float: left;
+}
+
+.menu_show {
+    display: flex;
+    align-items: center;
+}
+
+.menu_control {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.menu_show p {
+    padding-left: 10px;
+}
+
+.icons {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.menu_item ul {
+    position: relative;
+    background-color: #32416e;
+    height: 0;
+    overflow: hidden;
+}
+
+.toggleMenu~ul {
+    height: auto !important;
+}
+
+.menu_item ul li {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+.btn{
+    border: 1px solid #3498db;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: "montserrat";
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    float: left;
+  }
+  .btn1,.btn2,.btn3{
+    color: #3498db;
+  }
+  .btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #3498db;
+    z-index: -1;
+    transition: 0.8s;
+  }
+  .btn1::before,.btn2::before,.btn3::before{
+    top: 0;
+    border-radius: 0 0 50% 50%;
+  }
+.menu_item li:hover {
+    background-color: #1d2853;
+    cursor: pointer;
+    width: 100%;
+}
+
+#toggleIcon {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+#openMenu {
+    cursor: pointer;
+}
+
+.collapseMenu {
+    width: 100px;
+    overflow: unset;
+}
+
+.collapseMenu #openMenu {
+    display: none;
+}
+
+.collapseMenu .icons {
+    font-size: 25px;
+}
+
+.collapseMenu .menu_control {
+    justify-content: center;
+}
+
+.collapseMenu .menu_show p {
+    display: none;
+}
+
+.collapseMenu .menu_item:hover ul {
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 150px;
+    border-radius: 0 10px 10px 0;
+}
+
+.changeDirection {
+    transform: rotate(-180deg);
+}
+
+.profile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #151D38;
+    transition: all 0.4s ease-in-out;
+}

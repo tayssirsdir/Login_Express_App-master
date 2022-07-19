@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Connect Plus</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../../assets/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../../assets/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="../../assets/vendors/select2/select2.min.css">
+    <link rel="stylesheet" href="../../assets/vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="../../assets/images/favicon.png" />
+  </head>
+  <body>
+    <!-- partial -->
+    <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="page-header">
+            <h3 class="page-title"> Form elements </h3>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Forms</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Form elements</li>
+              </ol>
+            </nav>
+          </div>
+    <div class="row">
+        <div class="col-md-6 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Default form</h4>
+              <p class="card-description"> Basic form layout </p>
+              <form action ="/api/addserver" method= "POST" id = "addserver" class="forms-sample">
+                <div class="form-group">
+                  <label for="Username">Username</label>
+                  <input type="text" class="form-control" id="addserver" placeholder="Username">
+                </div>  
+                <div class="form-group">
+                  <label for="Password">Password</label>
+                  <input type="password" class="form-control" id="addserver" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="HostName">HostName</label>
+                    <input type="HostName" class="form-control" id="addserver" placeholder="HostName">
+                  </div>
+                <div class="form-group">
+                  <label for="Paths">Config Path</label>
+                  <input type="configpath" class="form-control" id="addserverss" placeholder="configpath">
+                </div>
+                
+                <button action ="/api/addserver" method= "POST" id = "addserver"type="submit" class="btn btn-primary me-2">Submit</button>
+                <button class="btn btn-light">Cancel</button>
+              </form>
+            </div>
+          </div>
+        </div>
+       
+    </div>
+  </body>

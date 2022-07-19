@@ -1,0 +1,84 @@
+[GENERAL]
+#This parameter control at which level data enrichment is performed in relay and native architectures
+;;#range=0;1
+enrich-all-data = 1
+
+[-FILTER1]
+UserRange= 0-9999
+;clientAccount=SAFA
+[LastRule]
+
+Enabled = 1
+;FilterList1 = 1
+;Force_38= 2
+Force_464= "KEPLER"
+;Force_474= -1
+;Force_590= -1
+;Force_592= -1
+;Force_593= -1
+;Force_594= 2
+;Force_595= 2
+;Force_744= -1
+;Force_914= -1
+Force_995= "FRED"
+;Force_1227= "1"
+;Force_1238=11
+;Force_1237=12
+;Force_1241= 2
+;Force_1244= 1
+;Force_1248= -1
+;Force_1242=4
+;Force_1243=4
+;Force_23 = 1
+;Force_1250= -1
+;Force_1093=105
+;Force_159= D
+;Force_31= "CH0009002962\0" 
+;Force_32= 
+;Force_26= "AUTOLA"
+Force_1491=2
+;Force_122= 3 
+
+[-Rule1]
+Enabled = 1
+FilterList1 = 1
+;;Force_1165 =1
+;;Force_1208 =1
+Force_38 = 2
+;;Force_278=31
+;;Force_1242 =4
+;;Force_1237=1238
+;Force_1391=S999
+Force_1093=105
+;;Force_22=99
+;;Force_16= aaaa
+;;Force_914=9
+;;Force_590 =1
+;;Force_1238 =1
+;;Force_1236 =8
+;;Force_1239 =4
+
+;;Force_1229 =1
+;;Force_1228 =__è
+;;;Force_tickSize = Instrument_TickSize
+;;Force_23 =4
+;;Force_24 =2
+Force_159= D
+;;Force_27=5
+Force_474= -1
+Force_590= -1
+Force_592= -1
+Force_593= -1
+Force_594= 2
+Force_595= 2
+Force_744= -1
+;Force_914= -1
+Force_995= "FRED"
+Force_1227= "1"
+Force_1241= 2
+Force_1244= 1
+Force_1248= -1
+Force_1250= -1
+Force_1231= "4581"
+Force_1237= "4581"
+
