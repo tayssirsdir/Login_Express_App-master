@@ -1,20 +1,25 @@
 #import paramiko 
-import pymongo 
-client = pymongo.MongoClient('mongodb://localhost:27017/FeedHumain')
+import pymongo
+from pymongo import MongoClient
+connection_string = "mongodb://localhost:27017/FeedHumain"
 
-mydb=client["FeedHumain"]
-mycollection=mydb["addserver"]
-print(mycollection)
+client = MongoClient(connection_string)
 
-username='hello'
-myResult = mycollection.find({})
-print(myResult)
-for item in myResult:
-    if item == username:
-        print(item)
+mydb=client.get_database("FeedHumain")
+mycollection=mydb.get_collection("addservers")
+#print(mycollection)
+
+username = input('enter usename')
+myResult = mycollection.find({"username": input('enter usename')})
+
+for each_doc in myResult:
+   
+    if each_doc.username==username:
+          print(each_doc)
+
 #one_record=mycollection.find({},{"username":1,"_id":0})
 
-#print(one_record)
+
 #command = "df"
 
 # Update the next three lines with your
